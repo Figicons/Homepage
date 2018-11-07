@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Figicon from '../reactcomponent/Figicon';
+import Figicon from '../../Figicons/components/FigiconReact';
 import Highlight from 'react-highlight';
 
 const Usage = () => (

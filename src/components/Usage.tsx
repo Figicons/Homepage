@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Figicon from '../reactcomponent/Figicon';
 import Highlight from 'react-highlight';
+import Figicon from '../../Figicons/components/FigiconReact';
 
 const Usage = () => (
     <React.Fragment>

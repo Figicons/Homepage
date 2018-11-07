@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Figicon from '../reactcomponent/Figicon';
-import * as figicons from '../../figicons.json';
+import Figicon from '../../Figicons/components/FigiconReact';
+import * as figicons from '../../Figicons/figicons.json';
 import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
 
@@ -63,9 +63,9 @@ const Home = () => (
             </p>
             <div className="svgs">
                 {Object.keys(figicons).map(name => (
-                    <div className="svg">
+                    <div className="svg" key={name}>
                         <div className="icon">
-                            <Figicon key={name} name={name} />
+                            <Figicon name={name} />
                         </div>
                         <div className="desc">{name}</div>
                     </div>

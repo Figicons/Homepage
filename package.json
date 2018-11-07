@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html",
-    "deploy": "rimraf ./build && parcel build ./src/index.html -d ./build --no-source-maps && cp _redirects ./build/_redirects && netlify deploy ./dist"
+    "submodule:update": "git submodule update --recursive --remote",
+    "deploy": "rimraf ./build && parcel build ./src/index.html -d ./build --no-source-maps && netlify deploy ./dist"
   },
   "dependencies": {
     "parcel": "^1.10.3",

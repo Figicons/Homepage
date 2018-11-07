@@ -1,5 +1,6 @@
 # Parcel
 .cache
+dist
 
 # Fonts
 *.woff2

@@ -7,7 +7,7 @@
   "scripts": {
     "start": "parcel ./src/index.html",
     "submodule:update": "git submodule update --recursive --remote",
-    "deploy": "rimraf ./build && parcel build ./src/index.html -d ./build --no-source-maps && netlify deploy ./dist"
+    "build": "yarn run submodule:update && parcel build ./src/index.html -d ./build --no-source-maps"
   },
   "dependencies": {
     "parcel": "^1.10.3",

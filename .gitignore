@@ -3,9 +3,6 @@
 build
 dist
 
-# Fonts
-*.woff2
-
 # Logs
 logs
 *.log

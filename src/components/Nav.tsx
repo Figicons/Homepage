@@ -13,7 +13,7 @@ const Nav = () => (
             <div className="options">
                 <Link to={'/building-icons'}>Building custom icons</Link>
                 <Link to={'/usage'}>Usage</Link>
-                <Link to={'/'}>FAQ</Link>
+                <Link to={'/faq'}>FAQ</Link>
                 <div className="button small grey">Designer Pack</div>
             </div>
         </div>

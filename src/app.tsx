@@ -7,6 +7,7 @@ import GettingStarted from './components/BuildingIcons';
 import Usage from './components/Usage';
 import Footer from './components/Footer';
 import createBrowserHistory from 'history/createBrowserHistory';
+import Faq from './components/Faq';
 
 const history = createBrowserHistory();
 
@@ -19,6 +20,7 @@ const Routes = () => (
         <Route exact path="/" render={props => <Home />} />
         <Route exact path="/building-icons" render={props => <GettingStarted />} />
         <Route exact path="/usage" render={props => <Usage />} />
+        <Route exact path="/faq" render={props => <Faq />} />
     </Switch>
 );
 

@@ -4,6 +4,10 @@
   "repository": "https://github.com/Figicons/Homepage.git",
   "author": "Stefan Mansson <st.mansson@icloud.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "deploy": "rimraf ./build && parcel build ./src/index.html -d ./build --no-source-maps && cp _redirects ./build/_redirects && netlify deploy ./dist"
+  },
   "dependencies": {
     "parcel": "^1.10.3",
     "react": ">=15",

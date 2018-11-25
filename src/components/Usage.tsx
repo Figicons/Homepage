@@ -29,7 +29,7 @@ const Usage = () => (
                 </p>
 
                 <h3>Installation</h3>
-                <p>Add Figicons to your project by either installing with NPM or Yarn:</p>
+                <p>Add Figicons to your project by either installing with NPM, Yarn, via CDN or relatively include the file:</p>
                 <div className="snippet">
                     <small>NPM</small>
                     <code className="white">
@@ -41,6 +41,18 @@ const Usage = () => (
                     <code className="white">
                         <span className="grey">$</span> yarn add figicons
                     </code>
+                </div>
+                <div className="snippet">
+                    <small>
+                        HTML <span>cdn</span>
+                    </small>
+                    <Highlight className="html">{'<script src="https://unpkg.com/figicon/umd/ReactComponent.js"></script>'}</Highlight>
+                </div>
+                <div className="snippet">
+                    <small>
+                        HTML <span>relative</span>
+                    </small>
+                    <Highlight className="html">{'<script src="/path/to/figicons/ReactComponent.js"></script>'}</Highlight>
                 </div>
 
                 <h3>Markup</h3>
@@ -71,20 +83,20 @@ const Usage = () => (
 
                 <h3>Installation</h3>
                 <p>
-                    Add a <code>script</code> tag to the <code>&lt;head /&gt;</code> of your markup which points to the CDN or relative path
+                    Add a <code>&lt;script /&gt;</code> tag to the <code>&lt;head /&gt;</code> of your markup which points to the CDN or relative path
                     of the Figicon Web Component:
                 </p>
                 <div className="snippet">
                     <small>
                         HTML <span>cdn</span>
                     </small>
-                    <Highlight className="html">{'<script src="https://cdn.com/figicons/webcomponent.min.js"></script>'}</Highlight>
+                    <Highlight className="html">{'<script src="https://unpkg.com/figicon/umd/WebComponent.js"></script>'}</Highlight>
                 </div>
                 <div className="snippet">
                     <small>
                         HTML <span>relative</span>
                     </small>
-                    <Highlight className="html">{'<script src="/path/to/figicons/webcomponent.min.js"></script>'}</Highlight>
+                    <Highlight className="html">{'<script src="/path/to/figicons/WebComponent.js"></script>'}</Highlight>
                 </div>
 
                 <h3>Markup</h3>

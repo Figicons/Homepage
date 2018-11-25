@@ -1,6 +1,7 @@
 # Parcel
 .cache
-build
+build/*
+!build/_redirects
 dist
 
 # Logs

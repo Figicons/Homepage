@@ -310,6 +310,10 @@ section.desc {
     }
 }
 
+.faq + .faq {
+    margin-top: 32px;
+}
+
 .options {
     display: flex;
 

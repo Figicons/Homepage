@@ -76,15 +76,8 @@ p {
         margin: 0 2px;
         color: #fff;
     }
-}
 
-a {
-    color: #fff;
-    cursor: default;
-    text-decoration: none;
-    position: relative;
-
-    &:after {
+    a:after {
         position: absolute;
         bottom: -3px;
         width: 100%;
@@ -94,6 +87,13 @@ a {
         opacity: 0.2;
         transition: opacity 60ms ease;
     }
+}
+
+a {
+    color: #fff;
+    cursor: default;
+    text-decoration: none;
+    position: relative;
 
     &[href] {
         cursor: pointer;
@@ -249,7 +249,7 @@ nav {
 
     &.dark {
         background-color: rgba($color-primary, 0.04);
-        box-shadow: inset 0 0 1px 0 rgba($color-primary, 0.5);
+        box-shadow: 0 0 0 1px inset rgba($color-primary, 0.1);
         color: $color-primary;
 
         > .button {
@@ -257,6 +257,11 @@ nav {
             color: #000;
         }
     }
+}
+
+a.alert:hover {
+    background-color: rgba($color-primary, 0.05);
+    box-shadow: 0 0 0 1px inset rgba($color-primary, 0.18);
 }
 
 section.desc {

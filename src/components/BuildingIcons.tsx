@@ -14,12 +14,12 @@ const Usage = () => (
             </p>
             <br />
 
-            <div className="alert dark">
+            <Link className="alert dark" to="/usage">
                 <span>
                     <Figicon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to use the default Figicons set only
                 </span>
                 <Figicon name="arrow-right" />
-            </div>
+            </Link>
         </div>
         <div className="mw7 center">
             <section className="desc">
@@ -109,7 +109,7 @@ const Usage = () => (
                     Next, add your icon components to your site
                 </span>
                 <Link className="button" to={'/usage'}>
-                    Usage
+                    Go to Usage
                 </Link>
             </div>
         </div>

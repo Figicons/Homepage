@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Highlight from 'react-highlight';
 import Figicon from '../../Figicons/components/FigiconReact';
+import { Link } from 'react-router-dom';
 
 const Usage = () => (
     <React.Fragment>
@@ -12,13 +13,13 @@ const Usage = () => (
             </p>
             <br />
 
-            <div className="alert dark">
+            <Link className="alert dark" to={'/building-icons'}>
                 <span>
                     <Figicon name="lightbulb" className="mr2" /> To use your own icons, designed in Figma, check out how to build custom
                     icons
                 </span>
                 <Figicon name="arrow-right" />
-            </div>
+            </Link>
         </div>
 
         <div className="mw7 center">

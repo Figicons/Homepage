@@ -1,0 +1,6 @@
+[
+    {
+        "q": "Can I only design in Figma?",
+        "a": "Yes, for now. Currently Figicons only support a direct integration with Figma due to the ease of their API platform. However, you can still manually add your SVG icon exports in and convert them using Figicons."
+    }
+]

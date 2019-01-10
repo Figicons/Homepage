@@ -5,7 +5,7 @@ import Figicon from '../../Figicons/components/FigiconReact';
 const Usage = () => (
     <React.Fragment>
         <div className="info mw7 center">
-            <h1 className="mb3">Usage</h1>
+            <h1 className="mb3">Using the icons</h1>
             <p>
                 React &amp; Web Components are automagically generated based on the Figicons config. Import the required script and use the
                 components immediately, simple.
@@ -14,7 +14,8 @@ const Usage = () => (
 
             <div className="alert dark">
                 <span>
-                    <Figicon name="lightbulb" className="mr2" /> To use your own Figma icons, check out how to build custom icons
+                    <Figicon name="lightbulb" className="mr2" /> To use your own icons, designed in Figma, check out how to build custom
+                    icons
                 </span>
                 <Figicon name="arrow-right" />
             </div>
@@ -83,8 +84,8 @@ const Usage = () => (
 
                 <h3>Installation</h3>
                 <p>
-                    Add a <code>&lt;script /&gt;</code> tag to the <code>&lt;head /&gt;</code> of your markup which points to the CDN or relative path
-                    of the Figicon Web Component:
+                    Add a <code>&lt;script /&gt;</code> tag to the <code>&lt;head /&gt;</code> of your markup which points to the CDN or
+                    relative path of the Figicon Web Component:
                 </p>
                 <div className="snippet">
                     <small>

@@ -5,14 +5,26 @@
     },
     {
         "q": "Can I import my own icons?",
-        "a": "Yep! Apart from the default icons, you can add your own ones. Check the 'Building custom icons' section to learn more."
+        "a": "Yep! Apart from the default icons, you can add your own ones that you've designed in Figma. Check the 'Building custom icons' section to learn more."
     },
     {
         "q": "Is only Figma supported?",
-        "a": "For now at least. Currently Figicons only support a direct integration with Figma due to the ease of their API platform. However, you can still manually add your SVG icon exports in and convert them using Figicons."
+        "a": "For now at least. Currently Figicons only support a direct integration with Figma due to the ease of their API platform. Alternatively, you can manually add your SVG icon exports in and convert them using Figicons."
+    },
+    {
+        "q": "What's this Designer Pack?",
+        "a": "The Designer Pack is a downloadable folder containing all the default icons in SVG format. The aim of it is just for designers to be able to use the out-of-the-box icons in their designs."
     },
     {
         "q": "Are only stroked icons supported?",
         "a": "Yes. Figicons cleans all stroke properties from imported icons and adds a unified style over them, which you can later override."
+    },
+    {
+        "q": "Does you store my data?",
+        "a": "Nope! Your icons are safe with you when you build them on your machine, nothing gets sent to us (we don't even have servers)."
+    },
+    {
+        "q": "Is there an online service?",
+        "a": "Not yet, however there are plans to support a platform with team functionality to automate the whole process, for a small fee."
     }
 ]

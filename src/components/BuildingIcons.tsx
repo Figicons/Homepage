@@ -23,12 +23,31 @@ const Usage = () => (
         </div>
         <div className="mw7 center">
             <section className="desc">
+                <h2><span className="number">#1</span> Clone the repository</h2>
+                <p>Clone the Figicons repository, or <a href="x-github-client://openRepo/https://github.com/Figicons/Figicons">open in Github Desktop</a>, to get the necessary scripts needed to build your icons.</p>
+                <div className="snippet">
+                    <div className="flex mt3">
+                        <code className="white">
+                            <span className="grey">$</span> git clone https://github.com/Figicons/Figicons.git
+                        </code>
+                    </div>
+                </div>
+
+                <p>Navigate to the folder and install the packages using <a href="https://github.com/yarnpkg/yarn" target="_blank" rel="noopener noreferrer">Yarn</a>.</p>
+                <div className="snippet">
+                    <code>
+                        <span className="grey">$</span> yarn
+                    </code>
+                </div>
+            </section>
+
+            <section className="desc">
                 <h2><span className="number">#1</span> Setting up the Figma API</h2>
-                <p>First, we'll need to get a communication going with Figma. Let's grab the File Key from your Figma file, this is what it should look like:</p>
+                <p>Next, we'll need to get a communication going with Figma. Grab &amp; copy the file key of your Figma file - this is the ending ID of your Figma project URL:</p>
                 <div className="snippet">
                     <small>A Figma file URL</small>
                     <code className="grey">
-                        https://www.figma.com/file/<span className="white">eIOdDEWeiHETuccK5xpfNhEc</span>
+                        https://www.figma.com/file/<strong className="yellow">eIOdDEWeiHETuccK5xpfNhEc</strong>
                     </code>
                 </div>
 
@@ -40,7 +59,7 @@ const Usage = () => (
                     </code>
                 </div>
 
-                <p>Paste the File Key and generated Token into your <code>FigmaAPI.json</code>config:</p>
+                <p>Paste the file key and generated Token into your <code>FigmaAPI.json</code>config relatively:</p>
                 <div className="snippet">
                     <small>figmapi.json</small>
                     <Highlight className="json">{`{ 
@@ -69,12 +88,11 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#3</span> Setting up icon options</h2>
+                <h2><span className="number">#3</span> Configuring icon options</h2>
                 <p>
                     Figicons ship with a default setup for how SVG icons will be rendered. Each property maps as an attribute on the created component.
                 </p>
-                <p>Now is the time to add the style to your icons (these properties can be overriden
-                    later on within the component).</p>
+                <p>You can edit the default style of your icons here or override the defaults on the icon component later on.</p>
                 <div className="snippet">
                     <small>iconAttributes.json defaults</small>
                     <Highlight className="json">{`{

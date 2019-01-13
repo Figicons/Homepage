@@ -427,6 +427,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 50ms ease, box-shadow 50ms ease;
 
     > fig-icon {
         margin-left: 6px;
@@ -444,8 +445,16 @@ main {
         box-shadow: none;
     }
 
-    &:after {
-        border: none;
+    &:hover {
+        color: $color-primary-invert;
+        background-color: $color-primary;
+        transform: translateY(-2px);
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), inset 0 -3px 1px 0 rgba(0, 0, 0, 0.4);
+    }
+
+    &:active {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), inset 0 2px 1px 0 rgba(0, 0, 0, 0.4);
     }
 }
 

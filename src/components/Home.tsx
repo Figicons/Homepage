@@ -13,7 +13,14 @@ const Home = () => (
                 Beautiful, customizable SVG icons, based on a 24px grid. Completely open source, MIT licensed and designed in Figma.
             </p>
             <div className="more">
-                <div className="button">Open Icons in Figma</div>
+                <a
+                    className="button"
+                    href="https://www.figma.com/file/eIOdDEWeiHETuccK5xpfNhEc/Icons?node-id=0%3A1"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Open Icons in Figma
+                </a>
                 <div className="split" />
                 <a href="https://github.com/animify/figicons">See on Github</a>
             </div>

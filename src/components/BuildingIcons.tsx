@@ -16,7 +16,7 @@ const Usage = () => (
 
             <Link className="alert dark" to="/usage">
                 <span>
-                    <Figicon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to use the default Figicons set only
+                    <Figicon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to only use the default Figicons set
                 </span>
                 <Figicon name="arrow-right" />
             </Link>
@@ -42,7 +42,7 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#1</span> Setting up the Figma API</h2>
+                <h2><span className="number">#2</span> Setting up the Figma API</h2>
                 <p>Next, we'll need to get a communication going with Figma. Grab &amp; copy the file key of your Figma file - this is the ending ID of your Figma project URL:</p>
                 <div className="snippet">
                     <small>A Figma file URL</small>
@@ -70,25 +70,25 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#2</span> Fetching &amp; building your icon set</h2>
+                <h2><span className="number">#3</span> Fetching &amp; building your icon set</h2>
                 <div className="alert dark mv3">
                     <span>
-                        <Figicon name="lightbulb" className="mr2" /> Icons should be individually placed in Frames to be fetched correctly
+                        <Figicon name="lightbulb" className="mr2" /> Each icon in Figma should be individually placed in Frames to be fetched correctly
                     </span>
                 </div>
                 <p>
-                    Let's fetch the icons. A <code>figicons.json</code> file will be created, which contains an optimized list of all your icons. The generated list will be the basis of how your icons will turn out.
+                    After running the below command, a <code>figicons.json</code> file will be created. This generated list is a barebones structure of your icons, which contains all the info needed for your package.
                 </p>
-                <p>Run the below command in Terminal:</p>
+                <strong>For each concurrent change you make in Figma, you'll need to rebuild the list.</strong>
                 <div className="flex mt3">
                     <code className="white">
-                        <span className="grey">$</span> yarn run build
+                        <span className="grey">$</span> yarn build
                     </code>
                 </div>
             </section>
 
             <section className="desc">
-                <h2><span className="number">#3</span> Configuring icon options</h2>
+                <h2><span className="number">#4</span> Configuring icon options</h2>
                 <p>
                     Figicons ship with a default setup for how SVG icons will be rendered. Each property maps as an attribute on the created component.
                 </p>
@@ -110,7 +110,7 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#4</span> Preparing for usage</h2>
+                <h2><span className="number">#5</span> Preparing for usage</h2>
                 <p>
                     It's time to bundle your custom icons into React &amp; Web Components (you can use whichever). Run the below command in
                     Terminal to package everything.

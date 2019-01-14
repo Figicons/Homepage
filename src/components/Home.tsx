@@ -3,6 +3,7 @@ import Figicon from '../../Figicons/components/FigiconReact';
 import * as figicons from '../../Figicons/figicons.json';
 import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
+import icons from '../../Figicons/icons/*.svg';
 
 const Home = () => (
     <React.Fragment>
@@ -70,12 +71,12 @@ const Home = () => (
             </p>
             <div className="svgs">
                 {Object.keys(figicons).map(name => (
-                    <div className="svg" key={name}>
+                    <a className="svg" key={name} href={`${icons[name]}`} download={`${name}.svg`} title={`Download ${name}.svg`}>
                         <div className="icon">
                             <Figicon name={name} />
                         </div>
                         <div className="desc">{name}</div>
-                    </div>
+                    </a>
                 ))}
             </div>
         </section>

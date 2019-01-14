@@ -201,6 +201,7 @@ nav {
 
 .bg {
     position: absolute;
+    top: 24px;
     content: ' ';
     width: 100%;
     height: 600px;
@@ -361,7 +362,7 @@ footer {
 }
 
 main {
-    padding: 144px 0 96px 0;
+    padding: 164px 0 96px 0;
 
     h1 {
         font-size: 64px;

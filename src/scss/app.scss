@@ -491,7 +491,7 @@ section + section {
 
         .desc {
             font-family: 'Roboto Mono', sans-serif;
-            border-left: 2px solid $color-grey60;
+            border-left: 1px solid $color-grey60;
             color: #fff;
             flex-grow: 1;
             height: 100%;
@@ -501,6 +501,16 @@ section + section {
             padding-left: 16px;
             font-weight: 300;
             font-size: 14px;
+        }
+
+        &:hover {
+            background-color: rgba($color-primary, 0.04);
+            box-shadow: 0 0 0 2px inset rgba($color-primary, 0.1);
+            color: $color-primary;
+
+            .desc {
+                border-color: rgba($color-primary, 0.1)
+            }
         }
     }
 }

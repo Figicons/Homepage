@@ -8,7 +8,7 @@ const Faq = () => (
         </div>
         <div className="mw7 center">
             {faqs.map((faq: { q: string; a: string }) => (
-                <div className="faq">
+                <div className="faq" key={faq.q}>
                     <h3>{faq.q}</h3>
                     <p>{faq.a}</p>
                 </div>

@@ -1,11 +1,12 @@
 import * as React from 'react';
-import Figicon from '../../Figicons/components/FigiconReact';
+import { Icon } from '../../Figicons/src';
 
 const Footer = () => (
     <footer>
         <div className="mw7 center">
             <p>
-                Made with <Figicon name="heart" height={18} color="red" style={{position: 'relative', top: '4px'}} /> by <a href="https://twitter.com/_animify">@_animify</a>
+                Made with <Icon name="heart" height={18} color="red" style={{ position: 'relative', top: '4px' }} /> by{' '}
+                <a href="https://twitter.com/_animify">@_animify</a>
             </p>
             <div className="options">
                 <a href="https://twitter.com/figicons">@figicons</a>

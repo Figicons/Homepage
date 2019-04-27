@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
-import Figicon from '../../Figicons/components/FigiconReact';
+import { Icon } from '../../Figicons/src';
 import Highlight from 'react-highlight';
 
 const Usage = () => (
@@ -16,9 +16,9 @@ const Usage = () => (
 
             <Link className="alert dark" to="/usage">
                 <span>
-                    <Figicon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to only use the default Figicons set
+                    <Icon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to only use the default Figicons set
                 </span>
-                <Figicon name="arrow-right" />
+                <Icon name="arrow-right" />
             </Link>
         </div>
         <div className="mw7 center">
@@ -87,8 +87,8 @@ const Usage = () => (
                 </h2>
                 <div className="alert dark mv3">
                     <span>
-                        <Figicon name="lightbulb" className="mr2" /> Each icon in Figma should be individually placed in Frames to be
-                        fetched correctly
+                        <Icon name="lightbulb" className="mr2" /> Each icon in Figma should be individually placed in Frames to be fetched
+                        correctly
                     </span>
                 </div>
                 <p>

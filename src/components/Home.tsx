@@ -1,6 +1,5 @@
 import * as React from 'react';
-import Figicon from '../../Figicons/components/FigiconReact';
-import * as figicons from '../../Figicons/figicons.json';
+import Figicons, { Icon } from '../../Figicons/src';
 import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
 import icons from '../../Figicons/icons/*.svg';
@@ -65,10 +64,10 @@ const Home = () => (
                 <Link to={'/building-icons'}>create your own framework</Link> based on your custom Figma-designed icons.
             </p>
             <div className="svgs">
-                {Object.keys(figicons).map(name => (
+                {Object.keys(Figicons.icons).map(name => (
                     <a className="svg" key={name} href={`${icons[name]}`} download={`${name}.svg`} title={`Download ${name}.svg`}>
                         <div className="icon">
-                            <Figicon name={name} />
+                            <Icon name={name} />
                         </div>
                         <div className="desc">{name}</div>
                     </a>

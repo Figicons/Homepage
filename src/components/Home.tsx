@@ -29,38 +29,33 @@ const Home = () => (
         <section className="mw7 center">
             <h2>Using icons</h2>
             <p className="mt2">
-                Figicons are currently programmatically supported as Web Components and as React Components.&nbsp;
-                <Link to={'/usage'}>Read more docs on Usage.</Link>
+                Currently, Figicons can be used as React components or programatically using the <Link to="/api">API</Link>.&nbsp; To get a
+                full overview, check out the full documentation on <Link to={'/usage'}>Usage</Link>.
             </p>
-            <div className="snippets">
-                <div className="snippet">
-                    <small>
-                        Web Component <a>Copy</a>
-                    </small>
-                    <code>
-                        <span>
-                            &lt;
-                            <span className="yellow">fig-icon</span> <span className="orange">name</span>=
-                            <span className="green">"heart"</span>
-                            &gt;&lt;/
-                            <span className="yellow">fig-icon</span>
-                            &gt;
-                        </span>
-                    </code>
-                </div>
-                <div className="snippet">
-                    <small>
-                        React Component <a>Copy</a>
-                    </small>
-                    <code>
-                        <span>
-                            &lt;
-                            <span className="yellow">Figicon</span> <span className="orange">name</span>=
-                            <span className="green">"heart"</span>
-                            /&gt;
-                        </span>
-                    </code>
-                </div>
+            <div className="snippet mt4">
+                <small>
+                    Import <a>Copy</a>
+                </small>
+                <code>
+                    <span>
+                        <span className="yellow">fig-icon</span> <span className="orange">name</span>=<span className="green">"heart"</span>
+                        &gt;&lt;/
+                        <span className="yellow">fig-icon</span>
+                        &gt;
+                    </span>
+                </code>
+            </div>
+            <div className="snippet mt4">
+                <small>
+                    React Component <a>Copy</a>
+                </small>
+                <code>
+                    <span>
+                        &lt;
+                        <span className="yellow">Figicon</span> <span className="orange">name</span>=<span className="green">"heart"</span>
+                        /&gt;
+                    </span>
+                </code>
             </div>
         </section>
         <section className="mw7 center">

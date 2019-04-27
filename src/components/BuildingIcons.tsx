@@ -23,27 +23,34 @@ const Usage = () => (
         </div>
         <div className="mw7 center">
             <section className="desc">
-                <h2><span className="number">#1</span> Clone the repository</h2>
-                <p>Clone the Figicons repository, or <a href="x-github-client://openRepo/https://github.com/Figicons/Figicons">open in Github Desktop</a>, to get the necessary scripts needed to build your icons.</p>
+                <h2>
+                    <span className="number">#1</span> Get the CLI
+                </h2>
+                <p>
+                    Grab the <a href="https://github.com/Figicons/cli">Figicons CLI</a> package and install it globally.
+                </p>
                 <div className="snippet">
-                    <div className="flex mt3">
-                        <code className="white">
-                            <span className="grey">$</span> git clone https://github.com/Figicons/Figicons.git
-                        </code>
-                    </div>
+                    <small>npm</small>
+                    <code className="white">
+                        <span className="grey">$</span> npm i figicons-cli -g
+                    </code>
                 </div>
-
-                <p>Navigate to the folder and install the packages using <a href="https://github.com/yarnpkg/yarn" target="_blank" rel="noopener noreferrer">Yarn</a>.</p>
                 <div className="snippet">
-                    <code>
-                        <span className="grey">$</span> yarn
+                    <small>Yarn</small>
+                    <code className="white">
+                        <span className="grey">$</span> yarn global add figicons-cli
                     </code>
                 </div>
             </section>
 
             <section className="desc">
-                <h2><span className="number">#2</span> Setting up the Figma API</h2>
-                <p>Next, we'll need to get a communication going with Figma. Grab &amp; copy the file key of your Figma file - this is the ending ID of your Figma project URL:</p>
+                <h2>
+                    <span className="number">#2</span> Setting up the Figma API
+                </h2>
+                <p>
+                    Next, we'll need to get a communication going with Figma. Grab &amp; copy the file key of your Figma file - this is the
+                    ending ID of your Figma project URL:
+                </p>
                 <div className="snippet">
                     <small>A Figma file URL</small>
                     <code className="grey">
@@ -51,7 +58,10 @@ const Usage = () => (
                     </code>
                 </div>
 
-                <p>Go to your Account Settings in Figma and click <code>Create a new personal access token</code>. It should look something like this:</p>
+                <p>
+                    Go to your Account Settings in Figma and click <code>Create a new personal access token</code>. It should look something
+                    like this:
+                </p>
                 <div className="snippet">
                     <small>Generated token</small>
                     <code>
@@ -59,7 +69,9 @@ const Usage = () => (
                     </code>
                 </div>
 
-                <p>Paste the file key and generated Token into your <code>FigmaAPI.json</code>config relatively:</p>
+                <p>
+                    Paste the file key and generated Token into your <code>FigmaAPI.json</code>config relatively:
+                </p>
                 <div className="snippet">
                     <small>figmapi.json</small>
                     <Highlight className="json">{`{ 
@@ -70,14 +82,18 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#3</span> Fetching &amp; building your icon set</h2>
+                <h2>
+                    <span className="number">#3</span> Fetching &amp; building your icon set
+                </h2>
                 <div className="alert dark mv3">
                     <span>
-                        <Figicon name="lightbulb" className="mr2" /> Each icon in Figma should be individually placed in Frames to be fetched correctly
+                        <Figicon name="lightbulb" className="mr2" /> Each icon in Figma should be individually placed in Frames to be
+                        fetched correctly
                     </span>
                 </div>
                 <p>
-                    After running the below command, a <code>figicons.json</code> file will be created. This generated list is a barebones structure of your icons, which contains all the info needed for your package.
+                    After running the below command, a <code>figicons.json</code> file will be created. This generated list is a barebones
+                    structure of your icons, which contains all the info needed for your package.
                 </p>
                 <strong>For each concurrent change you make in Figma, you'll need to rebuild the list.</strong>
                 <div className="flex mt3">
@@ -88,9 +104,12 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#4</span> Configuring icon options</h2>
+                <h2>
+                    <span className="number">#4</span> Configuring icon options
+                </h2>
                 <p>
-                    Figicons ship with a default setup for how SVG icons will be rendered. Each property maps as an attribute on the created component.
+                    Figicons ship with a default setup for how SVG icons will be rendered. Each property maps as an attribute on the created
+                    component.
                 </p>
                 <p>You can edit the default style of your icons here or override the defaults on the icon component later on.</p>
                 <div className="snippet">
@@ -110,7 +129,9 @@ const Usage = () => (
             </section>
 
             <section className="desc">
-                <h2><span className="number">#5</span> Preparing for usage</h2>
+                <h2>
+                    <span className="number">#5</span> Preparing for usage
+                </h2>
                 <p>
                     It's time to bundle your custom icons into React &amp; Web Components (you can use whichever). Run the below command in
                     Terminal to package everything.
@@ -123,9 +144,7 @@ const Usage = () => (
             </section>
 
             <div className="alert dark">
-                <span>
-                    Next, add your icon components to your site
-                </span>
+                <span>Next, add your icon components to your site</span>
                 <Link className="button" to={'/usage'}>
                     Go to Usage
                 </Link>

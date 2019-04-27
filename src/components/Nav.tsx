@@ -16,6 +16,7 @@ const Nav = () => (
             <div className="options">
                 <Link to={'/building-icons'}>Building custom icons</Link>
                 <Link to={'/usage'}>Usage</Link>
+                <Link to={'/api'}>API</Link>
                 <Link to={'/faq'}>FAQ</Link>
                 <a className="button small grey" href={require('../DesignerPack.zip')} download={`Figicons-DesignerPack_${version}.zip`}>
                     <Figicon name="download" width={14} height={14} style={{ marginRight: '6px' }} />

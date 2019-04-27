@@ -8,7 +8,7 @@
     "start": "parcel ./src/index.html",
     "submodule:update": "git submodule update --recursive --remote",
     "zip:pack": "sh ./zip.sh",
-    "build": "yarn run submodule:update && yarn zip:pack && parcel build ./src/index.html -d ./build --no-source-maps",
+    "build": "parcel build ./src/index.html -d ./build --no-source-maps",
     "deploy": "yarn build && netlify deploy --prod"
   },
   "dependencies": {
@@ -30,6 +30,7 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "netlify-cli": "^2.6.4",
     "sass": "^1.14.3",
     "stylelint": "^9.6.0",
     "stylelint-config-recommended": "^2.1.0",

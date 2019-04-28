@@ -45,85 +45,83 @@ const Usage = () => (
 
             <section className="desc">
                 <h2>
-                    <span className="number">#2</span> Setting up the Figma API
+                    <span className="number">#2</span> Run, run, run...
                 </h2>
                 <p>
-                    Next, we'll need to get a communication going with Figma. Grab &amp; copy the file key of your Figma file - this is the
-                    ending ID of your Figma project URL:
+                    Navigate to your working project root and run the command to get started. A series of propmpts will follow to guide you
+                    along.
                 </p>
                 <div className="snippet">
-                    <small>A Figma file URL</small>
+                    <small>Terminal</small>
+                    <code className="white">
+                        <span className="grey">$</span> figicons
+                    </code>
+                </div>
+                <p>
+                    Initially, select <code>New project</code>. Here you should input the ID of your Figma project, which you can find in
+                    the URL of your Figma file.
+                </p>
+                <div className="snippet">
+                    <small>Figma project</small>
                     <code className="grey">
                         https://www.figma.com/file/<strong className="yellow">eIOdDEWeiHETuccK5xpfNhEc</strong>
                     </code>
                 </div>
-
                 <p>
-                    Go to your Account Settings in Figma and click <code>Create a new personal access token</code>. It should look something
-                    like this:
+                    Next, you'll need a new personal access token so that the file can be read. Go to your Account Settings in Figma and
+                    click <code>Create a new personal access token</code>. Grab it and paste that in.
                 </p>
                 <div className="snippet">
-                    <small>Generated token</small>
+                    <small>Figma personal access token</small>
                     <code>
                         <span className="white">4562-826234b4-7936-4bf6-9d52-464da724bbdb</span>
                     </code>
                 </div>
+            </section>
+
+            <section className="desc">
+                <h2>
+                    <span className="number">#3</span> Configuration
+                </h2>
+                <p>
+                    Out of the box, you won't be required to create any configuration file. However, doing so may make things a little
+                    easier and will extend some functionality.
+                </p>
 
                 <p>
-                    Paste the file key and generated Token into your <code>FigmaAPI.json</code>config relatively:
+                    In your project root, create a <code>.figiconsrc</code> file. Figicons will automatically pick up this file, assuming
+                    this is where you're executing the <code>figicons</code> command.
                 </p>
+
                 <div className="snippet">
-                    <small>figmapi.json</small>
-                    <Highlight className="json">{`{ 
-    "fileKey": "eIOdDEWeiHETuccK5xpfNhEc",
-    "token": "4562-826234b4-7936-4bf6-9d52-464da724bbdb"
+                    <small>Default configuration file</small>
+                    <Highlight className="json">{`{
+    "iconAttrs": {
+        "xmlns": "http://www.w3.org/2000/svg",
+        "viewBox": "0 0 24 24",
+        "fill": "none",
+        "height": 24,
+        "width": 24,
+        "stroke": "currentColor",
+        "stroke-width": 2,
+        "stroke-linejoin": "round",
+        "stroke-linecap": "round"
+    }
 }`}</Highlight>
                 </div>
-            </section>
 
-            <section className="desc">
-                <h2>
-                    <span className="number">#3</span> Fetching &amp; building your icon set
-                </h2>
-                <div className="alert dark mv3">
-                    <span>
-                        <Icon name="lightbulb" className="mr2" /> Each icon in Figma should be individually placed in Frames to be fetched
-                        correctly
-                    </span>
-                </div>
+                <h3>Extending with a Figma config</h3>
                 <p>
-                    After running the below command, a <code>figicons.json</code> file will be created. This generated list is a barebones
-                    structure of your icons, which contains all the info needed for your package.
+                    Adding a Figma config to <code>.figiconsrc</code> will skip the prompt when running the CLI.
                 </p>
-                <strong>For each concurrent change you make in Figma, you'll need to rebuild the list.</strong>
-                <div className="flex mt3">
-                    <code className="white">
-                        <span className="grey">$</span> yarn build
-                    </code>
-                </div>
-            </section>
-
-            <section className="desc">
-                <h2>
-                    <span className="number">#4</span> Configuring icon options
-                </h2>
-                <p>
-                    Figicons ship with a default setup for how SVG icons will be rendered. Each property maps as an attribute on the created
-                    component.
-                </p>
-                <p>You can edit the default style of your icons here or override the defaults on the icon component later on.</p>
                 <div className="snippet">
-                    <small>iconAttributes.json defaults</small>
+                    <small>config.figmaConfig</small>
                     <Highlight className="json">{`{
-    "xmlns": "http://www.w3.org/2000/svg",
-    "viewBox": "0 0 24 24",
-    "fill": "none",
-    "height": 24,
-    "stroke": "currentColor",
-    "stroke-width": 2,
-    "stroke-linejoin": "round",
-    "stroke-linecap": "round",
-    "width": 24
+    ...,
+    "figmaConfig": {
+        "project": "xxxxxxxxxxxx",
+        "token": "xxxx-xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
+    }
 }`}</Highlight>
                 </div>
             </section>

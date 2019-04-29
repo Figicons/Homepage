@@ -11,7 +11,7 @@ const Nav = () => (
         <div className="mw8 center">
             <Link to={'/'} className="logo">
                 <img src={logotype} height="22" />
-                <code className="tiny">{version}</code>
+                <code className="release">{version}</code>
             </Link>
             <div className="options">
                 <Link to={'/building-icons'}>Building custom icons</Link>

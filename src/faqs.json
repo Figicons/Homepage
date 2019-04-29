@@ -21,10 +21,10 @@
     },
     {
         "q": "Does you store my data?",
-        "a": "Nope! Your icons are safe with you when you build them on your machine, nothing gets sent to us (we don't even have servers)."
+        "a": "Nope! Your icons are safe with you when you build them on your machine, nothing gets sent to us. We don't even have servers."
     },
     {
         "q": "Is there an online service?",
-        "a": "Not yet, however there are plans to support a platform with team functionality to automate the whole process, for a small fee."
+        "a": "Not yet, however there are plans to support a platform with team functionality to automate the whole process."
     }
 ]

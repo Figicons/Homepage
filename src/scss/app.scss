@@ -1,4 +1,4 @@
-$color-primary: #00ffb2;
+$color-primary: #3300ff;
 $color-primary-invert: #052b30;
 $color-grey100: #1a1a1a;
 $color-grey60: #212121;
@@ -7,8 +7,9 @@ $color-grey30: #757575;
 $color-grey20: #a7a7a7;
 $color-grey15: #ececec;
 $color-grey10: #ccc;
+$color-grey6: #e6e6e6;
 
-@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,800');
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 @import '../../node_modules/tachyons-sass/tachyons.scss';
 
@@ -22,10 +23,10 @@ body {
     font-family: 'Barlow', sans-serif;
     height: 100%;
     width: 100%;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
-    background-color: $color-grey60;
-    color: $color-grey15;
+    background-color: #fff;
+    color: $color-grey40;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -36,7 +37,7 @@ h1 {
     letter-spacing: -0.5px;
     line-height: 1.15;
     margin: 0;
-    color: #fff;
+    color: #000;
 }
 
 h2 {
@@ -44,7 +45,7 @@ h2 {
     font-weight: 700;
     line-height: 1.3;
     margin: 0;
-    color: #fff;
+    color: #000;
     position: relative;
 
     .number {
@@ -63,7 +64,7 @@ h3 {
     font-weight: 700;
     line-height: 1.3;
     margin: 0;
-    color: #fff;
+    color: #000;
 }
 
 p {
@@ -73,14 +74,17 @@ p {
     code {
         padding: 4px 8px;
         margin: 0 2px;
-        color: #fff;
+        color: $color-grey100;
+        background-color: rgba($color-grey100, 0.1);
+        font-weight: 600;
+        border: none;
     }
 
     a:after {
         position: absolute;
         bottom: -3px;
         width: 100%;
-        border-bottom: 2px solid #fff;
+        border-bottom: 2px solid #000;
         content: ' ';
         left: 0px;
         opacity: 0.2;
@@ -89,17 +93,18 @@ p {
 }
 
 a {
-    color: #fff;
+    color: $color-grey100;
     cursor: default;
     text-decoration: none;
     position: relative;
+    font-weight: 500;
 
     &[href] {
         cursor: pointer;
     }
 
     &:hover {
-        color: #fff;
+        color: $color-primary;
 
         &:after {
             opacity: 0.4;
@@ -117,9 +122,11 @@ small {
 code {
     font-family: 'Roboto Mono', sans-serif;
     font-size: 14px;
-    background-color: $color-grey100;
+    border: 1px solid darken(#1c1c1c, 20%);
+    background-color: #1c1c1c;
     padding: 16px 20px;
     border-radius: 4px;
+    color: #dfdfdf;
 
     .white {
         color: #fff;
@@ -142,16 +149,20 @@ code {
 
     .orange,
     .hljs-attr {
-        color: #e48d26;
+        color: #beb0ff;
     }
 
-    &.tiny {
-        background-color: $color-grey40;
+    &.release {
+        position: relative;
+        border-color: $color-primary;
+        background-color: $color-primary;
         height: 20px;
         font-size: 10px;
         line-height: 20px;
         padding: 0 6px;
         color: #fff;
+        font-weight: 800;
+        top: -1px;
     }
 }
 
@@ -160,12 +171,12 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 24px 24px 48px 24px;
+    padding: 24px;
     z-index: 220;
-    background: linear-gradient(to bottom, $color-grey60, rgba($color-grey60, 0));
+    background-color: rgba(#fff, .92);
 
     a {
-        color: $color-grey10;
+        color: $color-grey60;
 
         &:after {
             border: none;
@@ -220,7 +231,7 @@ nav {
         content: ' ';
         height: 100%;
         z-index: 1;
-        background: radial-gradient(rgba($color-grey60, 0), $color-grey60 60%);
+        background: radial-gradient(rgba(#FFF, 0), #FFF 60%);
     }
 }
 
@@ -228,40 +239,25 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: #000;
     font-weight: 500;
-    background-color: $color-primary;
-    padding: 16px 16px 16px 28px;
+    border: 2px solid rgba($color-primary, .2);
+    color: $color-primary;
+    background-color: #fff;
+    padding: 20px 16px 20px  24px;
     width: 100%;
     border-radius: 8px;
+    font-size: 16px;
 
     > span {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    > .button {
-        color: $color-primary;
-        background-color: #000;
-        box-shadow: none;
-    }
-
-    &.dark {
-        background-color: rgba($color-primary, 0.04);
-        box-shadow: 0 0 0 1px inset rgba($color-primary, 0.1);
-        color: $color-primary;
-
-        > .button {
-            background-color: $color-primary;
-            color: #000;
-        }
-    }
 }
 
 a.alert:hover {
-    background-color: rgba($color-primary, 0.05);
-    box-shadow: 0 0 0 1px inset rgba($color-primary, 0.18);
+    color: $color-primary;
+    border-color: $color-primary;
 }
 
 section.desc {
@@ -337,14 +333,11 @@ section.desc {
 
 footer {
     position: relative;
-    background-color: $color-grey60;
     width: 100%;
     padding: 24px;
     margin: 32px 0 32px 0;
 
     a {
-        color: $color-grey10;
-
         &:after {
             border: none;
         }
@@ -398,7 +391,7 @@ main {
     .split {
         height: 20px;
         width: 1px;
-        background-color: $color-grey40;
+        background-color: $color-grey10;
         content: ' ';
         margin: 12px 0;
     }
@@ -416,14 +409,13 @@ main {
     font-weight: 800;
     letter-spacing: 1.2px;
     padding: 14px 24px;
-    color: $color-primary-invert;
+    color: #fff;
     background-color: $color-primary;
     border-radius: 4px;
     width: fit-content;
     width: -moz-fit-content;
     cursor: default;
     line-height: 1.2;
-    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), inset 0 -2px 1px 0 rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -445,8 +437,14 @@ main {
         box-shadow: none;
     }
 
+    &.large {
+        padding: 20px 32px;
+        font-size: 16px;
+        box-shadow: none;
+    }
+
     &:hover {
-        color: $color-primary-invert;
+        color: #fff;
         background-color: $color-primary;
         transform: translateY(-2px);
         box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.4), inset 0 -3px 1px 0 rgba(0, 0, 0, 0.4);
@@ -466,33 +464,34 @@ section + section {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
+    grid-column-gap: 28px;
+    grid-row-gap: 28px;
     color: #fff;
     margin-top: 24px;
 
     .svg {
-        background-color: $color-grey100;
+        background-color: #fff;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-radius: 4px;
-        height: 48px;
+        height: 52px;
+        border: 1px solid $color-grey10;
 
         .icon {
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 48px;
-            color: #fff;
+            width: 52px;
+            color: #000;
             height: 100%;
             border-radius: 4px 0 0 4px;
         }
 
         .desc {
             font-family: 'Roboto Mono', sans-serif;
-            border-left: 1px solid $color-grey60;
-            color: #fff;
+            border-left: 1px solid rgba($color-grey10, .4);
+            color: #000;
             flex-grow: 1;
             height: 100%;
             display: flex;
@@ -504,12 +503,11 @@ section + section {
         }
 
         &:hover {
-            background-color: rgba($color-primary, 0.04);
-            box-shadow: 0 0 0 2px inset rgba($color-primary, 0.1);
+            border-color: $color-primary;
             color: $color-primary;
 
             .desc {
-                border-color: rgba($color-primary, 0.1)
+                border-color: rgba($color-primary, 0.2)
             }
         }
     }
@@ -534,7 +532,7 @@ section + section {
         justify-content: space-between;
         margin-bottom: 6px;
         width: 100%;
-        color: $color-grey20;
+        color: $color-grey60;
         font-weight: 700;
 
         a {

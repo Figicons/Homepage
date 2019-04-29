@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const Usage = () => (
     <React.Fragment>
         <div className="info mw7 center">
-            <h1 className="mb3">Using the icons</h1>
+            <h1 className="mb3">Usage</h1>
             <p>Import the required script and use the components immediately, simple.</p>
             <br />
 

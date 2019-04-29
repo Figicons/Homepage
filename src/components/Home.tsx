@@ -3,6 +3,7 @@ import Figicons, { Icon } from '../../Figicons/src';
 import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
 import icons from '../../Figicons/icons/*.svg';
+import Highlight from 'react-highlight';
 
 const Home = () => (
     <React.Fragment>
@@ -14,51 +15,44 @@ const Home = () => (
             </p>
             <div className="more">
                 <a
-                    className="button"
+                    className="button large"
                     href="https://www.figma.com/file/eIOdDEWeiHETuccK5xpfNhEc/Icons?node-id=0%3A1"
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Open Icons in Figma
+                    Preview Icons in Figma
                 </a>
                 <div className="split" />
                 <a href="https://github.com/animify/figicons">See on Github</a>
             </div>
         </main>
-        <section className="mw7 center">
-            <h2>Using icons</h2>
+        <section className="mw7 center desc">
+            <h2>Quick Start</h2>
             <p className="mt2">
                 Currently, Figicons can be used as React components or programatically using the <Link to="/api">API</Link>.&nbsp; To get a
                 full overview, check out the full documentation on <Link to={'/usage'}>Usage</Link>.
             </p>
+            <div className="snippet">
+                <small>Yarn</small>
+                <code className="white">
+                    <span className="grey">$</span> yarn add figicons
+                </code>
+            </div>
             <div className="snippet mt4">
                 <small>
                     Import <a>Copy</a>
                 </small>
-                <code>
-                    <span>
-                        <span className="yellow">fig-icon</span> <span className="orange">name</span>=<span className="green">"heart"</span>
-                        &gt;&lt;/
-                        <span className="yellow">fig-icon</span>
-                        &gt;
-                    </span>
-                </code>
+                <Highlight className="js">{"import Figicons, { Icon } from 'figicons';"}</Highlight>
             </div>
             <div className="snippet mt4">
                 <small>
                     React Component <a>Copy</a>
                 </small>
-                <code>
-                    <span>
-                        &lt;
-                        <span className="yellow">Figicon</span> <span className="orange">name</span>=<span className="green">"heart"</span>
-                        /&gt;
-                    </span>
-                </code>
+                <Highlight className="html">{'<Icon name="heart"/>'}</Highlight>
             </div>
         </section>
         <section className="mw7 center">
-            <h2>Default icons</h2>
+            <h2>Default Icons</h2>
             <p className="mt2">
                 There are over 150+ icons that ship by default with Figicons. You can also{' '}
                 <Link to={'/building-icons'}>create your own framework</Link> based on your custom Figma-designed icons.

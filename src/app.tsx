@@ -1,13 +1,13 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Switch, Route } from 'react-router-dom';
-import Nav from './components/Nav';
-import Home from './components/Home';
-import GettingStarted from './components/BuildingIcons';
-import Usage from './components/Usage';
-import Footer from './components/Footer';
+import Nav from './containers/Nav';
+import Home from './containers/Home';
+import GettingStarted from './containers/BuildingIcons';
+import Usage from './containers/Usage';
+import Footer from './containers/Footer';
 import createBrowserHistory from 'history/createBrowserHistory';
-import Faq from './components/Faq';
+import Faq from './containers/Faq';
 
 const history = createBrowserHistory();
 

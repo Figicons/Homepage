@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '../../Figicons/src';
 import Highlight from 'react-highlight';
+import Snippet from '../components/Snippet';
 
 const Usage = () => (
     <React.Fragment>
@@ -29,18 +30,8 @@ const Usage = () => (
                 <p>
                     Grab the <a href="https://github.com/Figicons/cli">Figicons CLI</a> package and install it globally.
                 </p>
-                <div className="snippet">
-                    <small>npm</small>
-                    <code className="white">
-                        <span className="grey">$</span> npm i figicons-cli -g
-                    </code>
-                </div>
-                <div className="snippet">
-                    <small>Yarn</small>
-                    <code className="white">
-                        <span className="grey">$</span> yarn global add figicons-cli
-                    </code>
-                </div>
+                <Snippet title="npm" language="console" code={'npm i figicons-cli -g'} />
+                <Snippet title="yarn" language="console" code={'yarn global add figicons-cli'} />
             </section>
 
             <section className="desc">
@@ -51,32 +42,20 @@ const Usage = () => (
                     Navigate to your working project root and run the command to get started. A series of propmpts will follow to guide you
                     along.
                 </p>
-                <div className="snippet">
-                    <small>Terminal</small>
-                    <code className="white">
-                        <span className="grey">$</span> figicons
-                    </code>
-                </div>
+                <Snippet title="Terminal" language="console" code={'figicons'} />
+
                 <p>
                     Initially, select <code>New project</code>. Here you should input the ID of your Figma project, which you can find in
                     the URL of your Figma file.
                 </p>
-                <div className="snippet">
-                    <small>Figma project</small>
-                    <code className="grey">
-                        https://www.figma.com/file/<strong className="yellow">eIOdDEWeiHETuccK5xpfNhEc</strong>
-                    </code>
-                </div>
+      
+                <Snippet title="Figma project" language="console" code={<>https://www.figma.com/file/<strong className="yellow">eIOdDEWeiHETuccK5xpfNhEc</strong></>} />
+
                 <p>
                     Next, you'll need a new personal access token so that the file can be read. Go to your Account Settings in Figma and
                     click <code>Create a new personal access token</code>. Grab it and paste that in.
                 </p>
-                <div className="snippet">
-                    <small>Figma personal access token</small>
-                    <code>
-                        <span className="white">4562-826234b4-7936-4bf6-9d52-464da724bbdb</span>
-                    </code>
-                </div>
+                <Snippet title="Figma personal access token" language="console" code={'4562-826234b4-7936-4bf6-9d52-464da724bbdb'} />
             </section>
 
             <section className="desc">
@@ -93,9 +72,7 @@ const Usage = () => (
                     this is where you're executing the <code>figicons</code> command.
                 </p>
 
-                <div className="snippet">
-                    <small>Default configuration file</small>
-                    <Highlight className="json">{`{
+                <Snippet title="Default configuration file" language="json" code={`{
     "iconAttrs": {
         "xmlns": "http://www.w3.org/2000/svg",
         "viewBox": "0 0 24 24",
@@ -107,23 +84,19 @@ const Usage = () => (
         "stroke-linejoin": "round",
         "stroke-linecap": "round"
     }
-}`}</Highlight>
-                </div>
+}`} />
 
                 <h3>Extending with a Figma config</h3>
                 <p>
                     Adding a Figma config to <code>.figiconsrc</code> will skip the prompt when running the CLI.
                 </p>
-                <div className="snippet">
-                    <small>config.figmaConfig</small>
-                    <Highlight className="json">{`{
+                <Snippet title="Default configuration file" language="json" code={`{
     ...,
     "figmaConfig": {
         "project": "xxxxxxxxxxxx",
         "token": "xxxx-xxxxxxx-xxxx-xxxx-xxxx-xxxxxxxx"
     }
-}`}</Highlight>
-                </div>
+}`} />
             </section>
 
             <section className="desc">
@@ -134,11 +107,7 @@ const Usage = () => (
                     It's time to bundle your custom icons into React &amp; Web Components (you can use whichever). Run the below command in
                     Terminal to package everything.
                 </p>
-                <div className="flex mt3">
-                    <code className="white">
-                        <span className="grey">$</span> yarn run bundle
-                    </code>
-                </div>
+                <Snippet title="yarn" language="console" code={'yarn global add figicons-cli'} />
             </section>
 
             <div className="alert dark">

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
 import icons from '../../Figicons/icons/*.svg';
 import Highlight from 'react-highlight';
+import Snippet from '../components/Snippet';
 
 const Home = () => (
     <React.Fragment>
@@ -32,24 +33,9 @@ const Home = () => (
                 Currently, Figicons can be used as React components or programatically using the <Link to="/api">API</Link>.&nbsp; To get a
                 full overview, check out the full documentation on <Link to={'/usage'}>Usage</Link>.
             </p>
-            <div className="snippet">
-                <small>Yarn</small>
-                <code className="white">
-                    <span className="grey">$</span> yarn add figicons
-                </code>
-            </div>
-            <div className="snippet mt4">
-                <small>
-                    Import <a>Copy</a>
-                </small>
-                <Highlight className="js">{"import Figicons, { Icon } from 'figicons';"}</Highlight>
-            </div>
-            <div className="snippet mt4">
-                <small>
-                    React Component <a>Copy</a>
-                </small>
-                <Highlight className="html">{'<Icon name="heart"/>'}</Highlight>
-            </div>
+            <Snippet title="Yarn" language="console" code={'yarn add figicons'} />
+            <Snippet title="Import" language="js" code={"import Figicons, { Icon } from 'figicons';"} />
+            <Snippet title="React Component" language="html" code={'<Icon name="heart"/>'} />
         </section>
         <section className="mw7 center">
             <h2>Default Icons</h2>

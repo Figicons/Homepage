@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logotype from '../assets/logotype.svg';
 import * as pkg from '../../package.json';
 import { Icon } from '../../Figicons/src';
@@ -14,10 +14,10 @@ const Nav = () => (
                 <code className="release">{version}</code>
             </Link>
             <div className="options">
-                <Link to={'/building-icons'}>Building custom icons</Link>
-                <Link to={'/usage'}>Usage</Link>
-                <Link to={'/api'}>API</Link>
-                <Link to={'/faq'}>FAQ</Link>
+                <NavLink to={'/start'}>Getting Started</NavLink>
+                <NavLink to={'/api'}>API</NavLink>
+                <NavLink to={'/custom-icons'}>Custom Icons</NavLink>
+                <NavLink to={'/faq'}>FAQ</NavLink>
                 <a
                     className="button small outlined"
                     href={require('../DesignerPack.zip')}

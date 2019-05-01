@@ -322,11 +322,15 @@ section.desc {
         font-weight: 600;
 
         + a {
-            margin-left: 24px;
+            margin-left: 32px;
         }
 
         + .button {
-            margin-left: 24px;
+            margin-left: 32px;
+        }
+
+        &.active {
+            color: $color-primary;
         }
     }
 }
@@ -436,7 +440,7 @@ main {
     &.outlined {
         color: $color-primary;
         border: 1px solid $color-grey10;
-        background-color: transparent;
+        background-color: #fff;
         font-weight: 700;
 
         &:hover {
@@ -477,46 +481,68 @@ section + section {
     grid-row-gap: 28px;
     color: #fff;
     margin-top: 24px;
+}
 
-    .svg {
-        background-color: #fff;
+.displayicon {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    height: 52px;
+    border: 1px solid $color-grey10;
+
+    .icon {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        border-radius: 4px;
-        height: 52px;
-        border: 1px solid $color-grey10;
+        justify-content: center;
+        width: 52px;
+        color: #000;
+        height: 100%;
+        border-radius: 4px 0 0 4px;
+    }
 
-        .icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 52px;
-            color: #000;
-            height: 100%;
-            border-radius: 4px 0 0 4px;
+    .desc {
+        border-left: 1px solid rgba($color-grey10, .4);
+        color: #000;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0 4px 4px 0;
+        padding-left: 16px;
+        justify-content: center;
+        align-items: flex-start;
+
+        > small {
+            font-size: 11px;
+            text-transform: capitalize;
+            height: 0;
+            transition: all 100ms ease;
+            opacity: 0;
+            letter-spacing: .4px;
+            color: $color-grey30;
         }
 
-        .desc {
+        > .name {
             font-family: 'Roboto Mono', sans-serif;
-            border-left: 1px solid rgba($color-grey10, .4);
-            color: #000;
-            flex-grow: 1;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            border-radius: 0 4px 4px 0;
-            padding-left: 16px;
             font-weight: 300;
             font-size: 14px;
         }
 
-        &:hover {
-            border-color: $color-primary;
-            color: $color-primary;
+    }
 
-            .desc {
-                border-color: rgba($color-primary, 0.2)
+    &:hover {
+        border-color: $color-primary;
+        color: $color-primary;
+
+        .desc {
+            border-color: rgba($color-primary, 0.2);
+
+            > small {
+                height: 14px;
+                opacity: 1;
             }
         }
     }

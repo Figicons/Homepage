@@ -3,8 +3,8 @@ import Figicons, { Icon } from '../../Figicons/src';
 import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
 import icons from '../../Figicons/icons/*.svg';
-import Highlight from 'react-highlight';
 import Snippet from '../components/Snippet';
+import DisplayIcon from '../components/DisplayIcon';
 
 const Home = () => (
     <React.Fragment>
@@ -31,7 +31,7 @@ const Home = () => (
             <h2>Quick Start</h2>
             <p className="mt2">
                 Currently, Figicons can be used as React components or programatically using the <Link to="/api">API</Link>.&nbsp; To get a
-                full overview, check out the full documentation on <Link to={'/usage'}>Usage</Link>.
+                full overview, check out the full documentation on <Link to={'/start'}>Usage</Link>.
             </p>
             <Snippet title="Yarn" language="console" code={'yarn add figicons'} />
             <Snippet title="Import" language="js" code={"import Figicons, { Icon } from 'figicons';"} />
@@ -41,16 +41,11 @@ const Home = () => (
             <h2>Default Icons</h2>
             <p className="mt2">
                 There are over 150+ icons that ship by default with Figicons. You can also{' '}
-                <Link to={'/building-icons'}>create your own framework</Link> based on your custom Figma-designed icons.
+                <Link to={'/custom-icons'}>create your own framework</Link> based on your custom Figma-designed icons.
             </p>
             <div className="svgs">
                 {Object.keys(Figicons.icons).map(name => (
-                    <a className="svg" key={name} href={`${icons[name]}`} download={`${name}.svg`} title={`Download ${name}.svg`}>
-                        <div className="icon">
-                            <Icon name={name} />
-                        </div>
-                        <div className="desc">{name}</div>
-                    </a>
+                    <DisplayIcon name={name} />
                 ))}
             </div>
         </section>

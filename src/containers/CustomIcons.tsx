@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { Link } from 'react-router-dom';
 import { Icon } from '../../Figicons/src';
-import Highlight from 'react-highlight';
 import Snippet from '../components/Snippet';
 
-const Usage = () => (
+const CustomIcons = () => (
     <React.Fragment>
         <div className="info mw7 center">
             <h1 className="mb3">Building custom icons</h1>
@@ -15,7 +14,7 @@ const Usage = () => (
             </p>
             <br />
 
-            <Link className="alert dark" to="/usage">
+            <Link className="alert dark" to="/start">
                 <span>
                     <Icon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to only use the default Figicons set
                 </span>
@@ -49,7 +48,7 @@ const Usage = () => (
                     the URL of your Figma file.
                 </p>
       
-                <Snippet title="Figma project" language="console" code={<>https://www.figma.com/file/<strong className="yellow">eIOdDEWeiHETuccK5xpfNhEc</strong></>} />
+                <Snippet title="Figma project ID" language="console" code={<>https://www.figma.com/file/<strong className="yellow">eIOdDEWeiHETuccK5xpfNhEc</strong></>} />
 
                 <p>
                     Next, you'll need a new personal access token so that the file can be read. Go to your Account Settings in Figma and
@@ -72,7 +71,7 @@ const Usage = () => (
                     this is where you're executing the <code>figicons</code> command.
                 </p>
 
-                <Snippet title="Default configuration file" language="json" code={`{
+                <Snippet title=".figiconsrc" language="json" code={`{
     "iconAttrs": {
         "xmlns": "http://www.w3.org/2000/svg",
         "viewBox": "0 0 24 24",
@@ -90,7 +89,7 @@ const Usage = () => (
                 <p>
                     Adding a Figma config to <code>.figiconsrc</code> will skip the prompt when running the CLI.
                 </p>
-                <Snippet title="Default configuration file" language="json" code={`{
+                <Snippet title=".figiconsrc" language="json" code={`{
     ...,
     "figmaConfig": {
         "project": "xxxxxxxxxxxx",
@@ -112,7 +111,7 @@ const Usage = () => (
 
             <div className="alert dark">
                 <span>Next, add your icon components to your site</span>
-                <Link className="button" to={'/usage'}>
+                <Link className="button" to={'/start'}>
                     Go to Usage
                 </Link>
             </div>
@@ -120,4 +119,4 @@ const Usage = () => (
     </React.Fragment>
 );
 
-export default Usage;
+export default CustomIcons;

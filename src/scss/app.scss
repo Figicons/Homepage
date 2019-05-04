@@ -154,13 +154,16 @@ code {
     }
 
     &.release {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: relative;
         border-color: $color-primary;
         background-color: $color-primary;
         height: 20px;
         font-size: 10px;
-        line-height: 20px;
-        padding: 0 6px;
+        line-height: 1;
+        padding: 0 5px;
         color: $color-white;
         font-weight: 800;
         top: -1px;

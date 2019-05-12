@@ -15,7 +15,7 @@ const GettingStarted = () => (
 
             <Link className="alert dark" to={'/custom-icons'}>
                 <span>
-                    <Icon name="lightbulb" className="mr2" /> To use your own icons, designed in Figma, check out how to build custom icons
+                    <Icon name="lightbulb" className="mr3" /> To use your own icons, designed in Figma, check out how to build custom icons.
                 </span>
                 <Icon name="arrow-right" />
             </Link>

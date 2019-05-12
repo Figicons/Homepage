@@ -322,6 +322,14 @@ section.desc {
     + .alert {
         margin-top: 48px;
     }
+
+    h2 > code {
+        background-color: $color-grey6;
+        padding: 4px 16px;
+        font-size: 2.4rem;
+        border: 0;
+        color: $color-black;
+    }
 }
 
 .faq + .faq {

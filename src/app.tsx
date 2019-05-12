@@ -8,6 +8,7 @@ import GettingStarted from './containers/GettingStarted';
 import Footer from './containers/Footer';
 import createBrowserHistory from 'history/createBrowserHistory';
 import Faq from './containers/Faq';
+import Api from './containers/Api';
 
 const history = createBrowserHistory();
 
@@ -17,10 +18,11 @@ history.listen(_ => {
 
 const Routes = () => (
     <Switch>
-        <Route exact path="/" render={props => <Home />} />
-        <Route exact path="/custom-icons" render={props => <CustomIcons />} />
-        <Route exact path="/start" render={props => <GettingStarted />} />
-        <Route exact path="/faq" render={props => <Faq />} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/custom-icons" component={CustomIcons} />
+        <Route exact path="/start" component={GettingStarted} />
+        <Route exact path="/faq" component={Faq} />
+        <Route exact path="/api" component={Api} />
     </Switch>
 );
 

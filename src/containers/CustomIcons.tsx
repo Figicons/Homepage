@@ -16,7 +16,7 @@ const CustomIcons = () => (
 
             <Link className="alert dark" to="/start">
                 <span>
-                    <Icon name="lightbulb" className="mr2" /> Skip this tutorial if you wish to only use the default Figicons set
+                    <Icon name="lightbulb" className="mr3" /> Skip this tutorial if you wish to only use the default Figicons set.
                 </span>
                 <Icon name="arrow-right" />
             </Link>
@@ -24,7 +24,7 @@ const CustomIcons = () => (
         <div className="container center">
             <section className="desc">
                 <h2>
-                    <span className="number">#1</span> Get the CLI
+                    <span className="number">1.</span> Get the CLI
                 </h2>
                 <p>
                     Grab the <a href="https://github.com/Figicons/cli">Figicons CLI</a> package and install it globally.
@@ -35,7 +35,7 @@ const CustomIcons = () => (
 
             <section className="desc">
                 <h2>
-                    <span className="number">#2</span> Fetch icons from Figma
+                    <span className="number">2.</span> Fetch icons from Figma
                 </h2>
                 <p>
                     Open up the console, navigate to your working project root and run <code>figicons</code> to get started. A series of propmpts will follow to guide you
@@ -59,7 +59,7 @@ const CustomIcons = () => (
 
             <section className="desc">
                 <h2>
-                    <span className="number">#3</span> Config with .figiconsrc
+                    <span className="number">3.</span> Config with .figiconsrc
                 </h2>
                 <p>
                     Out of the box, you won't be required to create any configuration file. However, doing so may make things a little
@@ -100,20 +100,20 @@ const CustomIcons = () => (
 
             <section className="desc">
                 <h2>
-                    <span className="number">#5</span> Usage
+                    <span className="number">4.</span> Usage
                 </h2>
                 <p>
-                    Once your icons have been successfully fetched and bundled, you should see a new <code>/figicons</code> directory where the CLI was run. This contains your custom icon config and an <strong>.svg</strong> export of each individual icons.
+                    Once your icons have been successfully fetched and bundled, you should see a new <code>/figicons</code> directory where the CLI was run. This contains your custom icon config and an <strong>.svg</strong> export of each individual icon.
                 </p>
 
                 <p>Import the default export of <code>figicons</code>. This is the core of Figicons.</p>
                 <Snippet title="Import Figicons" language="js" code={"import Figicons, { Icon } from 'figicons'"} />
 
                 <p>Import your newly created custom config file below that. This may vary on how you have JSON imports set up in your environment.</p>
-                <Snippet title="Import Custom JSON config" language="js" code={"import CustomConfig from './figicons/iconConfig.json'"} />
+                <Snippet title="Import Custom icons" language="js" code={"import customIcons from './figicons/icons.json'"} />
 
                 <p>Use the API to set your custom config within Figicons. You won't need to set this up each time you want to use an icon.</p>
-                <Snippet title="Set the custom config" language="js" code={'Figicons.setConfig(iconConfig);'} />
+                <Snippet title="Set the custom icons" language="js" code={'Figicons.setIcons(customIcons);'} />
 
                 <p>Use your custom icon with React. The <code>name</code> prop is a reflection of the Frame title in Figma. This can also be changed directly in the icon config but is not recommended.</p>
                 <Snippet title="Custom Icon" language="html" code={'<Icon name="custom-icon" />'} />

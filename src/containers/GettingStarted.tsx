@@ -5,7 +5,7 @@ import Snippet from '../components/Snippet';
 
 const GettingStarted = () => (
     <React.Fragment>
-        <div className="info mw7 center">
+        <div className="info container center">
             <h1 className="mb3">Getting Started</h1>
             <p>
                 Import the required script and use the components immediately, simple. This will only take a minute, assuming you can copy
@@ -21,7 +21,7 @@ const GettingStarted = () => (
             </Link>
         </div>
 
-        <div className="mw7 center">
+        <div className="container center">
             <section className="desc">
                 <h2>
                     <span className="number">#1</span> Installation

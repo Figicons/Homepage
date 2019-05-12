@@ -1,18 +1,17 @@
 import * as React from 'react';
-import Figicons, { Icon } from '../../Figicons/src';
+import Figicons from '../../Figicons/src';
 import { Link } from 'react-router-dom';
 import bg from '../assets/bg.svg';
-import icons from '../../Figicons/icons/*.svg';
 import Snippet from '../components/Snippet';
 import DisplayIcon from '../components/DisplayIcon';
 
 const Home = () => (
     <React.Fragment>
         <div className="bg" style={{ backgroundImage: `url(${bg})` }} />
-        <main className="mw7 center tc">
+        <main className="container center tc">
             <h1 className="mb3">Design &amp; use your icons in minutes. No fuss.</h1>
             <p className="large">
-                Beautiful, customizable SVG icons, based on a 24px grid. Completely open source, MIT licensed and designed in Figma.
+                Beautiful, customizable SVG icons, based on a 24px grid. <br /> Completely open source, MIT licensed and designed in Figma.
             </p>
             <div className="more">
                 <a
@@ -27,7 +26,7 @@ const Home = () => (
                 <a href="https://github.com/animify/figicons">See on Github</a>
             </div>
         </main>
-        <section className="mw7 center desc">
+        <section className="container center desc">
             <h2>Quick Start</h2>
             <p className="mt2">
                 Currently, Figicons can be used as React components or programatically using the <Link to="/api">API</Link>.&nbsp; To get a
@@ -37,7 +36,7 @@ const Home = () => (
             <Snippet title="Import" language="js" code={"import Figicons, { Icon } from 'figicons';"} />
             <Snippet title="React Component" language="html" code={'<Icon name="heart"/>'} />
         </section>
-        <section className="mw7 center">
+        <section className="container center">
             <h2>Default Icons</h2>
             <p className="mt2">
                 There are over 150+ icons that ship by default with Figicons. You can also{' '}

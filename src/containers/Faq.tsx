@@ -3,10 +3,10 @@ import faqs from '../faqs.json';
 
 const Faq = () => (
     <React.Fragment>
-        <div className="info mw7 center">
+        <div className="info container center">
             <h1 className="mb3">F.A.Q</h1>
         </div>
-        <div className="mw7 center">
+        <div className="container center">
             {faqs.map((faq: { q: string; a: string }) => (
                 <div className="faq" key={faq.q}>
                     <h3>{faq.q}</h3>

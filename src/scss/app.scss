@@ -28,7 +28,7 @@ body {
     font-size: 20px;
     line-height: 1.6;
     background-color: $color-white;
-    color: $color-grey40;
+    color: $color-grey100;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -40,13 +40,12 @@ h1, h2, h3 {
 
 h1 {
     font-size: 60px;
-    font-weight: 800;
-    letter-spacing: -0.5px;
+    font-weight: 700;
     line-height: 1.15;
 }
 
 h2 {
-    font-size: 36px;
+    font-size: 38px;
     font-weight: 700;
     line-height: 1.3;
     position: relative;
@@ -57,8 +56,9 @@ h2 {
         width: 40px;
         text-align: right;
         color: $color-grey30;
-        font-size: 28px;
-        top: 8px;
+        font-size: 24px;
+        top: 14px;
+        font-weight: 600;
     }
 }
 
@@ -66,6 +66,10 @@ h3 {
     font-size: 24px;
     font-weight: 700;
     line-height: 1.3;
+}
+
+strong {
+    font-weight: 600;
 }
 
 p {
@@ -108,7 +112,8 @@ a {
         color: $color-primary;
 
         &:after {
-            opacity: 0.4;
+            opacity: 0.8;
+            border-color: $color-primary;
         }
     }
 }
@@ -170,6 +175,10 @@ code {
     }
 }
 
+.container {
+    max-width: 860px;
+}
+
 nav {
     position: fixed;
     top: 0;
@@ -224,7 +233,7 @@ nav {
     background-position: center center;
     display: flex;
     z-index: -1;
-    animation: scroll linear infinite 48000ms;
+    animation: scroll linear infinite 60000ms;
 
     &:before {
         position: absolute;
@@ -316,21 +325,18 @@ section.desc {
 
 .options {
     display: flex;
-
-    .button {
-        top: -3px;
-    }
+    align-items: center;
 
     a {
         font-size: 15px;
         font-weight: 600;
 
         + a {
-            margin-left: 32px;
+            margin-left: 40px;
         }
 
         + .button {
-            margin-left: 32px;
+            margin-left: 40px;
         }
 
         &.active {
@@ -342,8 +348,8 @@ section.desc {
 footer {
     position: relative;
     width: 100%;
-    padding: 24px;
-    margin: 32px 0;
+    padding: 32px;
+    margin: 72px 0 48px 0;
 
     a {
         &:after {
@@ -366,7 +372,7 @@ main {
     padding: 164px 0 96px 0;
 
     h1 {
-        font-size: 64px;
+        font-size: 72px;
     }
 
     p.large {
@@ -401,11 +407,11 @@ main {
         width: 1px;
         background-color: $color-grey10;
         content: ' ';
-        margin: 12px 0;
+        margin: 14px 0;
     }
 
     a {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1;
     }
 }

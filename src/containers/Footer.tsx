@@ -3,7 +3,7 @@ import { Icon } from '../../Figicons/src';
 
 const Footer = () => (
     <footer>
-        <div className="mw7 center">
+        <div className="container center">
             <p>
                 Made with <Icon name="heart" height={18} color="red" style={{ position: 'relative', top: '4px' }} /> by{' '}
                 <a href="https://twitter.com/_animify">@_animify</a>

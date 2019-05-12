@@ -5,7 +5,7 @@ import Snippet from '../components/Snippet';
 
 const CustomIcons = () => (
     <React.Fragment>
-        <div className="info mw7 center">
+        <div className="info container center">
             <h1 className="mb3">Building Custom Icons</h1>
             <p>
                 Figicons ships with over 100+ default icons, designed in Figma. However, Figicons was built from the ground up to support
@@ -21,7 +21,7 @@ const CustomIcons = () => (
                 <Icon name="arrow-right" />
             </Link>
         </div>
-        <div className="mw7 center">
+        <div className="container center">
             <section className="desc">
                 <h2>
                     <span className="number">#1</span> Get the CLI

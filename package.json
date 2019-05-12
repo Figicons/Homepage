@@ -6,10 +6,11 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel ./src/index.html",
+    "submodule:install": "git submodule add https://github.com/Figicons/Figicons ./Figicons --recursive --remote",
     "submodule:update": "git submodule update --recursive --remote",
     "zip:pack": "sh ./zip.sh",
     "build": "parcel build ./src/index.html -d ./build --no-source-maps",
-    "build:netlify": "yarn submodule:update && yarn build",
+    "build:netlify": "yarn submodule:install && yarn build",
     "deploy": "yarn build && netlify deploy --prod"
   },
   "dependencies": {

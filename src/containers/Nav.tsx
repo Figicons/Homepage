@@ -8,7 +8,7 @@ const version = (pkg as any).version;
 
 const Nav = () => (
     <nav>
-        <div className="mw8 center">
+        <div className="container center">
             <Link to={'/'} className="logo">
                 <img src={logotype} height="22" />
                 <code className="release">{version}</code>

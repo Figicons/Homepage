@@ -24,7 +24,7 @@ const GettingStarted = () => (
         <div className="container center">
             <section className="desc">
                 <h2>
-                    <span className="number">#1</span> Installation
+                    <span className="number">1.</span> Installation
                 </h2>
                 <p>
                     Navigate to your working project root and add the <code>figicons</code> package via <strong>npm</strong> or{' '}
@@ -40,7 +40,7 @@ const GettingStarted = () => (
                 <Snippet title="Import" language="js" code="import Figicons, { Icon } from 'figicons';" />
 
                 <h2 className="mt5">
-                    <span className="number">#2</span> Usage
+                    <span className="number">2.</span> Usage
                 </h2>
                 <p>You're already halfway there. Now all you need to do is generate the icon.</p>
 

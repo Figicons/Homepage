@@ -9,6 +9,7 @@
     "submodule:update": "git submodule update --recursive --remote",
     "zip:pack": "sh ./zip.sh",
     "build": "parcel build ./src/index.html -d ./build --no-source-maps",
+    "build:netlify": "yarn submodule:update && yarn build",
     "deploy": "yarn build && netlify deploy --prod"
   },
   "dependencies": {

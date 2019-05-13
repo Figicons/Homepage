@@ -1,5 +1,8 @@
 import * as React from 'react';
 import { Icon } from '../../Figicons/src';
+import * as pkg from '../../package.json';
+
+const version = (pkg as any).version;
 
 const Footer = () => (
     <footer>
@@ -11,7 +14,9 @@ const Footer = () => (
             <div className="options">
                 <a href="https://twitter.com/figicons">@figicons</a>
                 <a href="https://github.com/animify/figicons">Open source</a>
-                <a>Download Designer Pack</a>
+                <a href={require('../DesignerPack.zip')} download={`Figicons-DesignerPack_${version}.zip`}>
+                    Download Designer Pack
+                </a>
             </div>
         </div>
     </footer>

@@ -265,6 +265,7 @@ nav {
     width: 100%;
     border-radius: 8px;
     font-size: 1.6rem;
+    transition: border-color 60ms ease;
 
     > span {
         display: flex;
@@ -274,7 +275,6 @@ nav {
 }
 
 a.alert:hover {
-    color: $color-primary;
     border-color: $color-primary;
 }
 
@@ -333,7 +333,7 @@ section.desc {
 }
 
 .faq + .faq {
-    margin-top: 32px;
+    margin-top: 48px;
 }
 
 .options {

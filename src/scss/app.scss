@@ -265,18 +265,22 @@ nav {
     width: 100%;
     border-radius: 8px;
     font-size: 1.6rem;
-    transition: border-color 60ms ease;
+    transform: translateY(0);
+    transition: border-color 80ms ease, transform 80ms ease;
 
     > span {
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+
+    &[href]:hover {
+        border-color: $color-primary;
+        transform: translateY(-3px);
+    }
 }
 
-a.alert:hover {
-    border-color: $color-primary;
-}
 
 section.desc {
     .snippet {
@@ -295,7 +299,7 @@ section.desc {
     }
 
     h2 + p {
-        margin-top: 8px;
+        margin-top: 12px;
     }
 
     p + .snippet {
@@ -316,7 +320,7 @@ section.desc {
     }
 
     .snippet + .snippet {
-        margin-top: 16px;
+        margin-top: 24px;
     }
 
     + .alert {
@@ -596,12 +600,17 @@ section + section {
         color: $color-grey60;
         font-weight: 700;
 
-        a {
-            opacity: 0.4;
+        a, strong {
+            display: inline-flex;
+            align-items: center;
 
             &:after {
                 display: none;
             }
+        }
+
+        strong {
+            color: $color-grey30;
         }
     }
 }

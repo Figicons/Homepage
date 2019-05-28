@@ -6,7 +6,7 @@ import Snippet from '../components/Snippet';
 const GettingStarted = () => (
     <React.Fragment>
         <div className="info container center">
-            <h1 className="mb3">Getting Started</h1>
+            <h1 className="mb4">Getting Started</h1>
             <p>
                 Import the required script and use the components immediately, simple. This will only take a minute, assuming you can copy
                 &amp; paste fairly quickly.
@@ -39,7 +39,7 @@ const GettingStarted = () => (
                 </p>
                 <Snippet title="Import" language="js" code="import Figicons, { Icon } from 'figicons';" />
 
-                <h2 className="mt5">
+                <h2 className="mt6">
                     <span className="number">2.</span> Usage
                 </h2>
                 <p>You're already halfway there. Now all you need to do is generate the icon.</p>
@@ -52,7 +52,7 @@ const GettingStarted = () => (
                 <Snippet title="Basic usage" language="html" code={'<Icon name="heart" />'} />
                 <Snippet title="Override props" language="html" code={'<Icon name="heart" stroke="red" strokeWidth={1} />'} />
 
-                <h2 className="mt5">The Config</h2>
+                <h2 className="mt6">The Config</h2>
                 <p>
                     The default export of <code>figicons</code> exposes the backbone so that you have full control on what is displayed. You
                     can use this to set up different icon configs and attributes for your icons.

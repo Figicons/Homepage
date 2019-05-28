@@ -6,7 +6,7 @@ import Snippet from '../components/Snippet';
 const CustomIcons = () => (
     <React.Fragment>
         <div className="info container center">
-            <h1 className="mb3">Building Custom Icons</h1>
+            <h1 className="mb4">Building Custom Icons</h1>
             <p>
                 Figicons ships with over 100+ default icons, designed in Figma. However, Figicons was built from the ground up to support
                 your own Figma-designed icons. With just a few steps, you can create a customized Figicon set to use on your site right
@@ -119,12 +119,10 @@ const CustomIcons = () => (
                 <Snippet title="Custom Icon" language="html" code={'<Icon name="custom-icon" />'} />
             </section>
 
-            <div className="alert dark">
-                <span>Next, add your icon components to your site</span>
-                <Link className="button" to={'/start'}>
-                    Go to Usage
-                </Link>
-            </div>
+            <Link className="alert dark" to="/start">
+                <span><Icon className="mr3" name="explore" /> For more on Icon usage, explore the Getting Started docs.</span>
+                <Icon name="arrow-right" />
+            </Link>
         </div>
     </React.Fragment>
 );

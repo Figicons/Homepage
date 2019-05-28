@@ -6,7 +6,7 @@ import { Icon } from '../../../Figicons/src';
 const Api = () => (
     <React.Fragment>
         <div className="info container center">
-            <h1 className="mb3">API Reference</h1>
+            <h1 className="mb4">API Reference</h1>
             <p>
                 The Figicons API provides a way to customize the inner core of Figicons. It mainly serves as a purpose for you to use any{' '}
                 <Link to="/custom-icons">custom icons</Link> that you've created.

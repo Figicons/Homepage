@@ -4,7 +4,7 @@ import faqs from '../faqs.json';
 const Faq = () => (
     <React.Fragment>
         <div className="info container center">
-            <h1 className="mb3">F.A.Q</h1>
+            <h1 className="mb4">F.A.Q</h1>
         </div>
         <div className="container center">
             {faqs.map((faq: { q: string; a: string }) => (

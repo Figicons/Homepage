@@ -5,11 +5,13 @@ import bg from '../assets/bg.svg';
 import Snippet from '../components/Snippet';
 import DisplayIcon from '../components/DisplayIcon';
 
+delete Figicons.icons.default;
+
 const Home = () => (
     <React.Fragment>
         <div className="bg" style={{ backgroundImage: `url(${bg})` }} />
         <main className="container center tc">
-            <h1 className="mb3">Design &amp; use your icons in minutes. No fuss.</h1>
+            <h1 className="mb4">Design &amp; use your icons in minutes. No fuss.</h1>
             <p className="large">
                 Beautiful, customizable SVG icons, based on a 24px grid. <br /> Completely open source, MIT licensed and designed in Figma.
             </p>

@@ -107,7 +107,11 @@ a {
     }
 
     &:hover {
-        color: $color-primary;
+        color: $color-primary !important;
+
+        .icon {
+            color: $color-primary !important;
+        }
 
         &:after {
             opacity: 0.8;
@@ -603,6 +607,10 @@ section + section {
         a, strong {
             display: inline-flex;
             align-items: center;
+
+            .icon {
+                color: $color-grey20;
+            }
 
             &:after {
                 display: none;

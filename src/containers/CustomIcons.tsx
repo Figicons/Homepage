@@ -14,7 +14,7 @@ const CustomIcons = () => (
             </p>
             <br />
 
-            <Link className="alert dark" to="/start">
+            <Link className="alert dark" to="/getting-started">
                 <span>
                     <Icon name="lightbulb" className="mr3" /> Skip this tutorial if you wish to only use the default Figicons set.
                 </span>
@@ -119,7 +119,7 @@ const CustomIcons = () => (
                 <Snippet title="Custom Icon" language="html" code={'<Icon name="custom-icon" />'} />
             </section>
 
-            <Link className="alert dark" to="/start">
+            <Link className="alert dark" to="/getting-started">
                 <span><Icon className="mr3" name="explore" /> For more on Icon usage, explore the Getting Started docs.</span>
                 <Icon name="arrow-right" />
             </Link>

@@ -1,7 +1,7 @@
 [
     {
         "q": "Is Figicons free?",
-        "a": "Of course! The Figicons CLI & package will be free and open source forever."
+        "a": "Heck yeah. The Figicons CLI & package will be free and open source forever."
     },
     {
         "q": "Can I import my own icons?",
@@ -9,22 +9,22 @@
     },
     {
         "q": "Is only Figma supported?",
-        "a": "For now at least. Currently Figicons only support a direct integration with Figma due to the ease of their API platform."
+        "a": "Currently Figicons only support a direct integration with Figma due to the ease of their API platform. There are no plans as of yet to support other design tools."
     },
     {
-        "q": "What's this Designer Pack?",
-        "a": "The Designer Pack is a downloadable folder containing all the default icons in SVG format. The aim of it is just for designers to be able to use the out-of-the-box icons in their designs."
+        "q": "What's a Designer Pack?",
+        "a": "The Designer Pack is a downloadable folder containing all the default icons in SVG format. The aim of it is for designers to be able to use the out-of-the-box icons within their designs."
     },
     {
-        "q": "Are only stroked icons supported?",
-        "a": "Yes. Figicons cleans all stroke properties from imported icons and adds a unified style over them, which you can later override."
+        "q": "Are only lined icons supported?",
+        "a": "Yes. Figicons optimizes & cleans all stroke properties from imported icons and adds a unified style over them, which you can override using the config from the API."
     },
     {
-        "q": "Does Figicons store my data?",
+        "q": "Does Figicons store any of my data?",
         "a": "Nope! Your icons are safe with you when you build them on your machine, nothing gets sent to us. We don't even have servers."
     },
     {
         "q": "Is there an online service?",
-        "a": "Not yet, however there are plans to support a platform with team functionality to automate importing custom icons from Figma to direct usage in code."
+        "a": "Not yet, however there are plans to support a web platform with team functionality to automate importing custom icons from Figma and converting them directly to React components."
     }
 ]

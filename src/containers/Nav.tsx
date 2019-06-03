@@ -15,7 +15,7 @@ const Nav = () => (
             </Link>
             <div className="options">
                 <NavLink to={'/about'}>About</NavLink>
-                <NavLink to={'/start'}>Getting Started</NavLink>
+                <NavLink to={'/getting-started'}>Getting Started</NavLink>
                 <NavLink to={'/custom-icons'}>Custom Icons</NavLink>
                 <NavLink to={'/api'}>API</NavLink>
                 <a

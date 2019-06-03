@@ -32,7 +32,7 @@ const Home = () => (
             <h2>Quick Start</h2>
             <p className="mt2">
                 Currently, Figicons can be used as React components or programatically using the <Link to="/api">API</Link>.&nbsp; To get a
-                full overview, check out the full documentation on <Link to={'/start'}>Usage</Link>.
+                full overview, check out the full documentation on <Link to="/getting-started">Usage</Link>.
             </p>
             <Snippet title="Yarn" language="console" code={'yarn add figicons'} />
             <Snippet title="Import" language="js" code={"import Figicons, { Icon } from 'figicons';"} />

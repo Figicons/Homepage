@@ -22,7 +22,7 @@ const Routes = () => (
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
         <Route exact path="/custom-icons" component={CustomIcons} />
-        <Route exact path="/start" component={GettingStarted} />
+        <Route exact path="/getting-started" component={GettingStarted} />
         <Route exact path="/api" component={Api} />
         <Route exact path="/404" component={Error} />
         <Redirect from="*" to="/404" />

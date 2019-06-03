@@ -1,5 +1,6 @@
 import * as React from 'react';
 import faqs from '../faqs.json';
+import { Icon } from '../../Figicons/src';
 
 const About = () => (
     <React.Fragment>
@@ -15,6 +16,15 @@ const About = () => (
                 just a few minutes of setting up. Supporting only lined icons is just the first step, with plans to handle more complex
                 illustrations and an automated web platform.
             </p>
+
+            <br />
+
+            <a className="alert dark" href="https://github.com/Figicons" target="_blank" rel="noopener noreferrer">
+                <span>
+                    <Icon name="lightbulb" className="mr3" /> Did you know all of Figicons is open source? Check it out on Github.
+                </span>
+                <Icon name="arrow-right" />
+            </a>
         </div>
         <section className="container center">
             <h2 className="mb5">FAQs</h2>

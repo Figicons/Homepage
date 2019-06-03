@@ -526,7 +526,7 @@ section + section {
     height: 52px;
     border: 1px solid $color-grey10;
 
-    .icon {
+    > .icon {
         display: flex;
         align-items: center;
         justify-content: center;

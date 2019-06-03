@@ -14,10 +14,10 @@ const Nav = () => (
                 <code className="release">{version}</code>
             </Link>
             <div className="options">
+                <NavLink to={'/about'}>About</NavLink>
                 <NavLink to={'/start'}>Getting Started</NavLink>
-                <NavLink to={'/api'}>API</NavLink>
                 <NavLink to={'/custom-icons'}>Custom Icons</NavLink>
-                <NavLink to={'/faq'}>FAQ</NavLink>
+                <NavLink to={'/api'}>API</NavLink>
                 <a
                     className="button small outlined"
                     href={require('../DesignerPack.zip')}

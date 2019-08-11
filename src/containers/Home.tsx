@@ -5,8 +5,6 @@ import bg from '../assets/bg.svg';
 import Snippet from '../components/Snippet';
 import DisplayIcon from '../components/DisplayIcon';
 
-delete Figicons.icons.default;
-
 const Home = () => (
     <React.Fragment>
         <div className="bg" style={{ backgroundImage: `url(${bg})` }} />
@@ -46,7 +44,7 @@ const Home = () => (
             </p>
             <div className="svgs">
                 {Object.keys(Figicons.icons).map(name => (
-                    <DisplayIcon name={name} />
+                    <DisplayIcon key={name} name={name} />
                 ))}
             </div>
         </section>

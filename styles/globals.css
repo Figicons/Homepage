@@ -1,3 +1,31 @@
+@import "./fonts.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  cursor: default;
+}
+
+button,
+button *,
+a,
+a *,
+.cursor-pointer * {
+  cursor: pointer;
+}
+
+input {
+  cursor: text;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .focus {
+    @apply focus-visible:ring-4 ring-primary/50 dark:ring-tertiary/50 outline-none ring-offset-2 ring-offset-tertiary dark:ring-offset-primary;
+  }
+}

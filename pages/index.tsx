@@ -1,5 +1,8 @@
 import Head from "next/head";
 import Image from "next/image";
+import Button from "../components/Button";
+import Icons from "../components/Icons";
+import Nav from "../components/Nav";
 
 export default function Home() {
   return (
@@ -10,52 +13,19 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <h1>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Nav />
 
-        <p>
-          Get started by editing <code>pages/index.tsx</code>
-        </p>
+      <main className="max-w-5xl mx-auto px-8 mt-24">
+        <div className="flex flex-col gap-16">
+          <h1 className="font-black text-7xl tracking-tight leading-[1.15]">
+            The workflow for icons from Figma → React, in seconds.
+          </h1>
 
-        <div>
-          <a href="https://nextjs.org/docs">
-            <h2>Documentation &rarr;</h2>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn">
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a href="https://github.com/vercel/next.js/tree/canary/examples">
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app">
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          <Button size="large">Get started</Button>
         </div>
-      </main>
 
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+        <Icons />
+      </main>
     </div>
   );
 }
